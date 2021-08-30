@@ -18,37 +18,16 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "plugins": ["react", "@typescript-eslint", "prettier", "import"],
   "rules": {
+    "prettier/prettier": ["error", {}, { "usePrettierrc": true }],
     "react/react-in-jsx-scope": "off",
-    "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": ["error"],
-    "no-unused-vars": "warn",
-    "prettier/prettier": [
-      "warn",
-      {
-        "semi": true,
-        "singleQuote": true
-      }
-    ],
-    "react/jsx-filename-extension": [
-      2,
-      {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
-    ],
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "js": "never",
-        "jsx": "never",
-        "ts": "never",
-        "tsx": "never"
-      }
-    ]
+    "react/prop-types": "off",
+    "@typescript-eslint/explicit-function-return-type": "off"
   },
   "settings": {
-    "version": "detect"
+    "react": {
+      "version": "detect"
+    }
   }
 }
